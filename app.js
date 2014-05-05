@@ -3,16 +3,11 @@ var app = express();
 var id3 = require('id3js');
 var fs = require('fs');
 
-var allowCrossDomain = function(req, res, next) {
-    res.header('Access-Control-Allow-Origin', config.allowedDomains);
-    res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
-    res.header('Access-Control-Allow-Headers', 'Content-Type');
-
-    next();
-}
-app.configure(function() {
-	app.use(allowCrossDomain);
-});
+app.all('*', function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "X-Requested-With");
+  next();
+ });
 
 
 app.get('/tracks', function(req, res){
