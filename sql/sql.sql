@@ -1,0 +1,32 @@
+CREATE TABLE songs (
+	id serial primary key,
+	artist varchar(100) not null,
+	album varchar(100) not null,
+	title varchar(100) not null,
+	file varchar(255) not null
+);
+
+INSERT INTO Songs(artist,album,title,file) VALUES('Akcija','','Plunge 1 (Akcija remix)','http://lallinuo.users.cs.helsinki.fi/songs/Akcija_Trip-To-Your-Liver-320.mp3');
+
+INSERT INTO Songs(artist,album,title,file) VALUES('Akcija','','The Citys Grey Pavemenets','http://lallinuo.users.cs.helsinki.fi/songs/Akcija_dve---Plunge-1-Akcija-remix-320.mp3');
+
+INSERT INTO Songs(artist,album,title,file) VALUES('Canton','Canton Becker','Snow Break','http://lallinuo.users.cs.helsinki.fi/songs/Canton_Snow-Break-320.mp3');
+
+INSERT INTO Songs(artist,album,title,file) VALUES('Mr Rogers','Doramey','Orgasmo','http://lallinuo.users.cs.helsinki.fi/songs/Mr-Rogers_ORGASMO-feat-Kirstin-320.mp3');
+
+
+INSERT INTO Songs(artist,album,title,file) VALUES('Rapture of the Deep','Underwearbare','Amberant','http://lallinuo.users.cs.helsinki.fi/songs/RaptureOfTheDeep_Amberant-320.mp3');
+
+INSERT INTO Songs(artist,album,title,file) VALUES('Slyde','Audioplasty','Sumthang','http://lallinuo.users.cs.helsinki.fi/songs/Slyde_Sumthang-320.mp3');
+
+
+INSERT INTO Songs(artist,album,title,file) VALUES('acklabs','Acklabs','Mindless priapism BassReq1','http://lallinuo.users.cs.helsinki.fi/songs/acklabs_Mindless-priapism-BassReq1-320.mp3');
+
+
+INSERT INTO Songs(artist,album,title,file) VALUES('bela.bar','quarkestra','Orient6','http://lallinuo.users.cs.helsinki.fi/songs/belabar_Orient6-320.mp3');
+
+
+INSERT INTO Songs(artist,album,title,file) VALUES('Pikachu','Braunsaur','pikachu','http://lallinuo.users.cs.helsinki.fi/songs/brandon_pikachu-320.mp3');
+
+INSERT INTO Songs(artist,album,title,file) VALUES('Nothing','Emptiness','jtwheels38','http://lallinuo.users.cs.helsinki.fi/songs/jtwheels38_Nothing-320.mp3');
+

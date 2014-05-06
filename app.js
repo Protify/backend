@@ -5,9 +5,9 @@ var fs = require('fs');
 var async = require('async');
 var songFolderPath = process.env.HOME+"/projects/protify-songs";
 var pg = require('pg');
-var conString = "postgres://@localhost/database";
 
-var params = { host: "localhost", user: "lallinuo", password: "e1312e9207f01e4d", database: "lallinuo", ssl: true};
+//var params = { host: "localhost", user: "lallinuo", password: "e1312e9207f01e4d", database: "lallinuo", ssl: true};
+var params = { host: "localhost", user: "postgres", password: "tsoha2014", database: "postgres", ssl: true};
 
 app.all('*', function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
@@ -16,8 +16,23 @@ app.all('*', function(req, res, next) {
  });
 
 
+
+app.get('/tracks',function(req,res){
+  pg.connect(params, function(err,client,done){
+    if(err){
+      return console.log(err);
+    }
+    client.query('SELECT * FROM Songs', function(err,result){
+      res.send(result.rows);
+      console.log(result);
+    })
+  })
+
+})
+
+
 //Palauttaa JSONina kaikkien biisien pathit ja niihin liittyvät tagit
-app.get('/tracks', function(req, res){
+app.get('/tracksFromFolder', function(req, res){
   //käy läpi biisit halutusta kansiosta ja luo jokaisesta oman olion talettaen pathiin kappaleen polun
   fs.readdir(songFolderPath,function(err,files){
     var songs = files.map(function(x){
