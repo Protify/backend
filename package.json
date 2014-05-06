@@ -20,6 +20,8 @@
     "express": "~4.1.1",
     "id3js": "~1.1.2",
     "async": "~0.8.0",
-    "pg": "~3.0.3"
+    "pg": "~3.0.3",
+    "cookie-parser": "~1.0.1",
+    "express-session": "~1.0.4"
   }
 }
